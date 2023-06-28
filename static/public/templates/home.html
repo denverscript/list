@@ -1,0 +1,15 @@
+{{ define "home" }}
+{{ template "header" .}}
+
+<section class="center">
+	<a href="{{ .RootURL }}/subscription/form" class="button">{{ L.T "public.sub" }}</a>
+
+	<div class="home-options">
+		{{ if .EnablePublicArchive }}
+		    <a href="{{ .RootURL }}/archive">{{ L.T "public.archiveTitle" }}</a>
+		{{ end }}
+	</div>
+</section>
+
+{{ template "footer" .}}
+{{ end }}
